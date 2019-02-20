@@ -1,7 +1,7 @@
 ## Below are two functions that are used to create a special object that stores
 ## a numeric matrix and caches its inversion
 
-## The first function, makeCacheMatrix creates a special "vector"
+## The first function, makeCacheMatrix creates a special "matrix"
 ## which is really a list containing a function to
 
 ## 1. set the value of the matrix
@@ -23,7 +23,7 @@ makeCacheMatrix <- function(x = matrix())
     list(set = set, get = get, setinv = setinv, getinv = getinv)
 }
 
-## The following function calculates the inversion of the special "vector"
+## The following function calculates the inversion of the special "matrix"
 ## created with the makeCacheMatrix function. It first checks if the inversion
 ## has already been calculated. If so, it gets the inversion from the cache and
 ## skips the computation. Otherwise, it calculates the inversion of the data
